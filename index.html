@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EASY CODE — بورتفوليو | Apps Made Easy</title>
+<meta name="description" content="بورتفوليو EASY CODE — تطبيقات ويب وأندرويد ووكلاء ذكاء اصطناعي تعمل أوف لاين. صُنع بحب في مصر 🇪🇬">
+<link rel="icon" href="./favicon.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  :root {
+    --bg:#0a0a0b; --card:#131318; --card2:#1a1a22; --line:#26262f;
+    --teal:#48d1cc; --amber:#e8b04b; --txt:#e8e8ec; --mut:#9a9aa8;
+  }
+  body { background:var(--bg); color:var(--txt); font-family:"Segoe UI", Tahoma, "Noto Kufi Arabic", Arial, sans-serif; line-height:1.7; }
+  a { color:var(--teal); text-decoration:none; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 20px; }
+
+  header { position:sticky; top:0; z-index:10; background:rgba(10,10,11,.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+  .brand { font-weight:800; font-size:1.15rem; letter-spacing:.5px; }
+  .brand span { color:var(--teal); }
+  .nav .links { display:flex; gap:18px; font-size:.95rem; }
+  .nav .links a { color:var(--mut); }
+  .nav .links a:hover { color:var(--txt); }
+
+  .hero { padding:48px 0 32px; text-align:center; }
+  .hero img.banner { width:min(420px,100%); border-radius:18px; border:1px solid var(--line); box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .hero h1 { font-size:2rem; margin-top:26px; }
+  .hero h1 em { color:var(--teal); font-style:normal; }
+  .hero p.sub { color:var(--mut); max-width:640px; margin:12px auto 0; font-size:1.05rem; }
+  .hero .btns { margin-top:26px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:12px 26px; border-radius:12px; font-weight:700; font-size:1rem; transition:transform .15s; }
+  .btn:hover { transform:translateY(-2px); }
+  .btn.t { background:var(--teal); color:#062523; }
+  .btn.o { border:1px solid var(--teal); color:var(--teal); }
+
+  .stats { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; padding:10px 0 40px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 26px; min-width:130px; }
+  .stat b { display:block; font-size:1.5rem; color:var(--amber); }
+  .stat i { font-style:normal; color:var(--mut); font-size:.85rem; }
+
+  h2.sec { text-align:center; font-size:1.6rem; margin:56px 0 8px; }
+  p.secp { text-align:center; color:var(--mut); margin-bottom:30px; }
+
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:10px; transition:border-color .2s, transform .2s; }
+  .card:hover { border-color:var(--teal); transform:translateY(-3px); }
+  .card .ic { font-size:2rem; }
+  .card h3 { font-size:1.15rem; }
+  .card p { color:var(--mut); font-size:.95rem; flex:1; }
+  .card .tag { display:inline-block; background:var(--card2); color:var(--teal); border:1px solid var(--line); border-radius:99px; padding:2px 12px; font-size:.75rem; }
+  .card .lnks { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+  .card .lnks a { background:var(--card2); border:1px solid var(--line); color:var(--txt); padding:7px 14px; border-radius:10px; font-size:.85rem; }
+  .card .lnks a:hover { border-color:var(--teal); color:var(--teal); }
+  .card .lnks a.apk { border-color:var(--amber); color:var(--amber); }
+
+  .hire { margin:64px 0; background:linear-gradient(135deg,#132020,#1a1a22); border:1px solid var(--teal); border-radius:20px; padding:38px 26px; text-align:center; }
+  .hire h2 { font-size:1.5rem; margin-bottom:10px; }
+  .hire p { color:var(--mut); max-width:560px; margin:0 auto 20px; }
+  .hire .big { display:inline-block; background:var(--amber); color:#241703; font-weight:800; padding:15px 34px; border-radius:14px; font-size:1.05rem; }
+  .hire .small { display:block; margin-top:14px; font-size:.85rem; color:var(--mut); }
+
+  .social { text-align:center; margin:40px 0; }
+  .social img { border-radius:14px; border:1px solid var(--line); }
+  .social .btns { margin-top:18px; }
+
+  footer { border-top:1px solid var(--line); margin-top:50px; padding:28px 0 40px; text-align:center; color:var(--mut); font-size:.9rem; }
+  footer .f { margin-top:8px; }
+  @media (max-width:600px){ .nav .links{ display:none; } .hero h1{ font-size:1.6rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">EASY <span>CODE</span> <small style="color:var(--mut);font-weight:400">/ بورتفوليو</small></div>
+    <div class="links">
+      <a href="#projects">المشاريع</a>
+      <a href="#hire">اطلب شغلك</a>
+      <a href="#social">تواصل</a>
+      <a href="https://github.com/Mido9980">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <img class="banner" src="./hero.png" alt="EASY CODE — Apps Made Easy">
+  <h1>أهلاً بك في <em>EASY CODE</em> — Apps Made Easy</h1>
+  <p class="sub">مطوّر مستقل من مصر 🇪🇬 أبني تطبيقات ويب وأندرويد ووكلاء ذكاء اصطناعي — كلها بتشتغل أوف لاين ومن غير مفاتيح API. من الفكرة للتطبيق الجاهز للتوزيع.</p>
+  <div class="btns">
+    <a class="btn t" href="#projects">شوف المشاريع ↓</a>
+    <a class="btn o" href="#hire">اشتغل معايا</a>
+  </div>
+</section>
+
+<div class="stats wrap">
+  <div class="stat"><b>6+</b><i>منتج مكتمل</i></div>
+  <div class="stat"><b>14</b><i>لغة مدعومة</i></div>
+  <div class="stat"><b>100%</b><i>أوف لاين</i></div>
+  <div class="stat"><b>0</b><i>مفاتيح API</i></div>
+</div>
+
+<h2 class="sec" id="projects">🚀 المشاريع</h2>
+<p class="secp">كل مشروع هنا شغال لايف وتقدر تجربه أو تحمّله دلوقتي</p>
+
+<div class="grid wrap">
+
+  <div class="card">
+    <div class="ic">🎬</div>
+    <h3>AI Video Agent — وكيل الفيديو</h3>
+    <span class="tag">AI + PWA + APK</span>
+    <p>اكتب فكرتك نص يطلعلك فيديو كامل بالموسيقى والمشاهد — بيشتغل جوه المتصفح من غير أي سيرفر، وبيتكلم 14 لغة. متاح ويب وPWA وAPK لأندرويد.</p>
+    <div class="lnks">
+      <a href="https://mido9980.github.io/ai-video-agent/">جرّبه لايف</a>
+      <a class="apk" href="https://github.com/Mido9980/ai-video-agent/releases/download/v1.0/AI-Video-Agent-EASYCODE.apk">تحميل APK</a>
+      <a href="https://github.com/Mido9980/ai-video-agent">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ic">🤖</div>
+    <h3>وكيلك بوت — صانع وكلاء AI</h3>
+    <span class="tag">Offline Builder</span>
+    <p>برنامج بيبني لك وكيل ذكاء اصطناعي مخصص لبيزنسك بالعامية المصرية — عيادة، محلات، مكتب خدمات — بيشتغل أوف لاين بالكامل وبأخلاقيات مدمجة. متاح ويب وAPK.</p>
+    <div class="lnks">
+      <a href="https://mido9980.github.io/easy-code-agent/">جرّبه لايف</a>
+      <a class="apk" href="https://github.com/Mido9980/easy-code-agent/releases/download/v1.0/Easy-Code-Agent-EASYCODE.apk">تحميل APK</a>
+      <a href="https://github.com/Mido9980/easy-code-agent">GitHub</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ic">📗</div>
+    <h3>مصحف القرآن — Quran Reader</h3>
+    <span class="tag">Web App</span>
+    <p>قراءة المصحف الشريف بأسلوب كتاب حقيقي: تقليب صفحات بالأصابع، وضع صفحتين بالعرض، شاشة كاملة بتكبير، وتحميل المصحف كله للقراءة أوف لاين.</p>
+    <div class="lnks">
+      <a href="https://media.base44.com/files/public/69db368352cbe2cb34d1b7c1/04273bf00_quran.html">جرّبه لايف</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ic">🧮</div>
+    <h3>آلة حاسبة — Native Android</h3>
+    <span class="tag">Kotlin + Compose</span>
+    <p>تطبيق أندرويد native مبني بـ Kotlin وJetpack Compose — سريع وخفيف بتصميم Material 3، جاهز كملف APK للتثبيت المباشر.</p>
+    <div class="lnks">
+      <a href="https://teamily.ai/link/RdKEpf7oZYQ">صفحة المشروع</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ic">🛒</div>
+    <h3>متجر EASY CODE — سوق التطبيقات</h3>
+    <span class="tag">Marketplace</span>
+    <p>متجر ويب كامل بأسلوب متاجر التطبيقات: بحث وتصنيفات وبطاقات تفاعلية — جاهز يتوسع لقاعدة بيانات وسيرفر في أي وقت.</p>
+    <div class="lnks">
+      <a href="https://media.base44.com/files/public/69db368352cbe2cb34d1b7c1/5fb8d3dda_index.html">زور المتجر</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ic">💡</div>
+    <h3>عينة وكيل جاهزة</h3>
+    <span class="tag">Live Demo</span>
+    <p>مثال حي لوكيل بوت مبني بصانع الوكلاء — شوف بعينك شكل الوكيل المخصص لبيزنس حقيقي قبل ما تبني واحد بتاعك.</p>
+    <div class="lnks">
+      <a href="https://media.base44.com/files/public/69db368352cbe2cb34d1b7c1/7e0aa9cb1_sample_agent.html">شوف العينة</a>
+    </div>
+  </div>
+
+</div>
+
+<section class="hire wrap" id="hire">
+  <h2>💼 عايز تطبيق زي دول؟ اشتغل معايا</h2>
+  <p>سجّل على منصة Base44 من الرابط ده — التسجيل بيتم <b>باسمي</b> فيحسبلك عندي، وأنت كمان بتاخد كريدت مجاني تبدأ بيه. من فوقها نبني لك تطبيقك أو وكيلك المخصص.</p>
+  <a class="big" href="https://app.base44.com/register?ref=6G2OCUFX50TXWY6G&from_url=%2Fcreate-superagent">سجّل على Base44 وابدأ مجاناً ←</a>
+  <span class="small">بعد التسجيل ابعتلي من الشات بتاع الوكيل بتاعي وهبدأ معاك فوراً 🚀</span>
+</section>
+
+<section class="social wrap" id="social">
+  <h2 class="sec" style="margin-top:0">🌐 تابعني</h2>
+  <p class="secp">كل جديد على لينكدإن وجيت هاب</p>
+  <img src="./hero.png" alt="EASY CODE" style="width:min(360px,100%)">
+  <div class="btns">
+    <a class="btn t" href="#linkedin" id="liBtn">LinkedIn</a>
+    <a class="btn o" href="https://github.com/Mido9980">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div>EASY CODE ✨ Apps Made Easy</div>
+  <div class="f">صُنع في مصر 🇪🇬 — جميع الحقوق محفوظة © <span id="yr"></span></div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
