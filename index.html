@@ -34,6 +34,7 @@
   .btn:hover { transform:translateY(-2px); }
   .btn.t { background:var(--teal); color:#062523; }
   .btn.o { border:1px solid var(--teal); color:var(--teal); }
+  .btn.a { background:var(--amber); color:#241703; }
 
   .stats { display:flex; justify-content:center; gap:14px; flex-wrap:wrap; padding:10px 0 40px; }
   .stat { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px 26px; min-width:130px; }
@@ -41,7 +42,24 @@
   .stat i { font-style:normal; color:var(--mut); font-size:.85rem; }
 
   h2.sec { text-align:center; font-size:1.6rem; margin:56px 0 8px; }
+  h2.sec .star { color:var(--amber); }
   p.secp { text-align:center; color:var(--mut); margin-bottom:30px; }
+
+  /* ---- البرنامج الأساسي ---- */
+  .featured { margin:20px 0 10px; }
+  .featcard { display:flex; gap:24px; align-items:center; background:linear-gradient(135deg,#132020,#1a1a22); border:1px solid var(--teal); border-radius:20px; padding:28px; box-shadow:0 20px 60px rgba(0,0,0,.4); }
+  .featcard img.logo { width:170px; height:170px; object-fit:cover; border-radius:16px; border:1px solid var(--line); flex-shrink:0; }
+  .featcard h3 { font-size:1.45rem; margin-bottom:6px; }
+  .featcard .sub { color:var(--teal); font-size:.9rem; margin-bottom:12px; }
+  .featcard p { color:var(--mut); font-size:.98rem; }
+  .featcard ul { list-style:none; margin:14px 0 18px; display:flex; flex-wrap:wrap; gap:8px; }
+  .featcard ul li { background:var(--card2); border:1px solid var(--line); border-radius:99px; padding:4px 14px; font-size:.8rem; color:var(--txt); }
+  .featcard .lnks { display:flex; flex-wrap:wrap; gap:10px; }
+  .featcard .lnks a { padding:10px 20px; border-radius:12px; font-weight:700; font-size:.9rem; }
+  .featcard .lnks a.live { background:var(--teal); color:#062523; }
+  .featcard .lnks a.apk { background:var(--amber); color:#241703; }
+  .featcard .lnks a.gh { border:1px solid var(--teal); color:var(--teal); }
+  @media (max-width:700px){ .featcard{ flex-direction:column; text-align:center; } .featcard ul{ justify-content:center; } .featcard .lnks{ justify-content:center; } }
 
   .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:18px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; display:flex; flex-direction:column; gap:10px; transition:border-color .2s, transform .2s; }
@@ -76,9 +94,9 @@
   <div class="wrap nav">
     <div class="brand">EASY <span>CODE</span> <small style="color:var(--mut);font-weight:400">/ بورتفوليو</small></div>
     <div class="links">
+      <a href="#main">البرنامج الأساسي</a>
       <a href="#projects">المشاريع</a>
       <a href="#hire">اطلب شغلك</a>
-      <a href="#social">تواصل</a>
       <a href="https://github.com/Mido9980">GitHub</a>
     </div>
   </div>
@@ -89,8 +107,8 @@
   <h1>أهلاً بك في <em>EASY CODE</em> — Apps Made Easy</h1>
   <p class="sub">مطوّر مستقل من مصر 🇪🇬 أبني تطبيقات ويب وأندرويد ووكلاء ذكاء اصطناعي — كلها بتشتغل أوف لاين ومن غير مفاتيح API. من الفكرة للتطبيق الجاهز للتوزيع.</p>
   <div class="btns">
-    <a class="btn t" href="#projects">شوف المشاريع ↓</a>
-    <a class="btn o" href="#hire">اشتغل معايا</a>
+    <a class="btn t" href="#main">البرنامج الأساسي ⭐</a>
+    <a class="btn o" href="#projects">باقي المشاريع</a>
   </div>
 </section>
 
@@ -101,7 +119,33 @@
   <div class="stat"><b>0</b><i>مفاتيح API</i></div>
 </div>
 
-<h2 class="sec" id="projects">🚀 المشاريع</h2>
+<h2 class="sec" id="main"><span class="star">⭐</span> البرنامج الأساسي</h2>
+<p class="secp">المنتج الرسمي لـ EASY CODE — صانع وكلاء الذكاء الاصطناعي</p>
+
+<div class="featured wrap">
+  <div class="featcard">
+    <img class="logo" src="./agent.png" alt="Easy Code Agent">
+    <div>
+      <h3>Easy Code Agent — صانع وكلاء AI</h3>
+      <div class="sub">المنتج الرئيسي 🚀 | AI Agent Builder</div>
+      <p>برنامج بيبني لك وكيل ذكاء اصطناعي مخصص لبيزنسك بالعامية المصرية في دقائق — عيادة، محلات، مكتب خدمات — والوكيل الناتج يشتغل أوف لاين بالكامل كملف مستقل، بأخلاقيات مدمجة تحترم قيم المجتمع المصري والعربي. متاح ويب وAPK لأندرويد.</p>
+      <ul>
+        <li>✅ بناء وكيل بدون برمجة</li>
+        <li>✅ أوف لاين 100%</li>
+        <li>✅ لهجة مصرية</li>
+        <li>✅ أخلاقيات مدمجة</li>
+        <li>✅ سجل حجوزات + حماية أدمن</li>
+      </ul>
+      <div class="lnks">
+        <a class="live" href="https://mido9980.github.io/easy-code-agent/">جرّبه لايف</a>
+        <a class="apk" href="https://github.com/Mido9980/easy-code-agent/releases/download/v1.0/Easy-Code-Agent-EASYCODE.apk">تحميل APK</a>
+        <a class="gh" href="https://github.com/Mido9980/easy-code-agent">GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="sec" id="projects">🚀 باقي المشاريع</h2>
 <p class="secp">كل مشروع هنا شغال لايف وتقدر تجربه أو تحمّله دلوقتي</p>
 
 <div class="grid wrap">
@@ -115,18 +159,6 @@
       <a href="https://mido9980.github.io/ai-video-agent/">جرّبه لايف</a>
       <a class="apk" href="https://github.com/Mido9980/ai-video-agent/releases/download/v1.0/AI-Video-Agent-EASYCODE.apk">تحميل APK</a>
       <a href="https://github.com/Mido9980/ai-video-agent">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ic">🤖</div>
-    <h3>وكيلك بوت — صانع وكلاء AI</h3>
-    <span class="tag">Offline Builder</span>
-    <p>برنامج بيبني لك وكيل ذكاء اصطناعي مخصص لبيزنسك بالعامية المصرية — عيادة، محلات، مكتب خدمات — بيشتغل أوف لاين بالكامل وبأخلاقيات مدمجة. متاح ويب وAPK.</p>
-    <div class="lnks">
-      <a href="https://mido9980.github.io/easy-code-agent/">جرّبه لايف</a>
-      <a class="apk" href="https://github.com/Mido9980/easy-code-agent/releases/download/v1.0/Easy-Code-Agent-EASYCODE.apk">تحميل APK</a>
-      <a href="https://github.com/Mido9980/easy-code-agent">GitHub</a>
     </div>
   </div>
 
